@@ -1,0 +1,24 @@
+/* TAGS */
+hr {
+	margin: 2px 0;
+}
+
+/* CLASS  */
+.card.comments {
+	margin-top: 10px;
+}
+.list-group.list-group-flush .list-group-item {
+	border: none;
+	background: rgba(0,0,0,0.01);
+	padding-top: 5px;
+}
+.navbar-expand-md .navbar-collapse {
+    display: inline!important;
+}
+.btn.btn-outline-warning:hover {
+	color: white;
+}
+.basic-form {
+	width:30%;
+	margin: 30px auto;
+}

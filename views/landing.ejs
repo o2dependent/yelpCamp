@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>yelpCamp</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link href="/stylesheets/landing.css" rel="stylesheet">
+	<script href="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+</head>
+<body>
+<% if(error && error.length > 0) { %>
+	<div class="container">
+		<div class="alert alert-danger" role="alert">
+		  <%= error %>
+		</div>
+	</div>
+<% } %>
+<% if(success && success.length > 0) { %>
+	<div class="container">
+		<div class="alert alert-success" role="alert">
+		  <%= success %>
+		</div>
+	</div>
+<% } %>
+
+<div id="landing-header" class="container">
+	<h1>
+		Welcome to yelpCamp
+	</h1>
+
+	<a class="btn btn-primary" href="/campgrounds">Campgrounds</a>
+</div>
+
+
+<ul class="slideshow">
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+
+<%- include("partials/footer") %>
