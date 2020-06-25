@@ -28,7 +28,7 @@ app.use(flash());
 
 app.set("view engine","ejs");
 
-seedDB(); //seed db
+// seedDB(); //seed db
 
 // PASSPORT CONFIG
 app.use(require("express-session")({
