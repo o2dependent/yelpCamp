@@ -63,7 +63,7 @@ router.get("/:id", (req, res) => {
 			console.log(err);
 			res.redirect("/campgrounds");
 		} else {
-			Campground.find().limit(5).exec((err, limitCamps) => {
+			Campground.find({ _id: { $not: { $eq: (foundCamp._id) } } }).limit(3).exec((err, limitCamps) => {
 				if(err) {
 					res.redirect("/campgrounds");
 				} else {
