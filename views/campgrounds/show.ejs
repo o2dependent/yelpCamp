@@ -7,7 +7,7 @@
 				<a href="/campgrounds" id="campgrounds-back"><i class="fas fa-chevron-left"></i> Campgrounds</a>
 			</p>
 			<div class="list-group">
-				<% for(let i = 0; i < 3; i++) { %>
+				<% for(let i = 0; i < sideCamps.length; i++) { %>
 					<% if(!sideCamps[i]._id.equals(camp._id)) { %>
 					<div class="card my-1 mx-auto text-center" style="width: 16rem;">
 						  <img class="card-img-top" src="<%= sideCamps[i].img %>">
