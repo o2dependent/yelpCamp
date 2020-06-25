@@ -22,3 +22,25 @@ hr {
 	width:30%;
 	margin: 30px auto;
 }
+.jumbotron {
+	background: url("https://images.unsplash.com/photo-1517824806704-9040b037703b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+	background-position: bottom;
+}
+.side-card {
+	margin: 1% 0;
+}
+#camp-index-jumbotron {
+	text-align: center;
+	border-radius: 25px;
+	border: 1px solid black;
+	width: 50%;
+	padding: 2%;
+	background: rgba(255,255,255,0.9);
+}
+#camp-index-jumbotron p {
+	margin: 2.5% 0;
+	padding: 0;
+}
+#campgrounds-back {
+	font-weight: 500;
+}

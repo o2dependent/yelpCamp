@@ -2,14 +2,23 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-3">
+		<div class="col-md-3 p-0">
 			<p class="lead">
-				<a href="/campgrounds">Campgrounds</a>
+				<a href="/campgrounds" id="campgrounds-back"><i class="fas fa-chevron-left"></i> Campgrounds</a>
 			</p>
 			<div class="list-group">
-				<li class="list-group-item active">Info 1</li>
-				<li class="list-group-item">Info 2</li>
-				<li class="list-group-item">Info 3</li>
+				<% for(let i = 0; i < 3; i++) { %>
+					<% if(!sideCamps[i]._id.equals(camp._id)) { %>
+					<div class="card my-1 mx-auto text-center" style="width: 16rem;">
+						  <img class="card-img-top" src="<%= sideCamps[i].img %>">
+						  <div class="card-body">
+							<h5 class="card-title"><%= sideCamps[i].name %></h5>
+							<p class="card-text"></p>
+							<a href="/campgrounds/<%= sideCamps[i]._id %>" class="btn btn-primary">More Info</a>
+						  </div>
+						</div>
+					<% } %>
+				<% } %>
 			</div>
 		</div>
 		<div class="col-md-9">

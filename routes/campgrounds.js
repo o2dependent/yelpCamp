@@ -63,8 +63,14 @@ router.get("/:id", (req, res) => {
 			console.log(err);
 			res.redirect("/campgrounds");
 		} else {
-			//Render the page with id data
-			res.render("campgrounds/show", {camp: foundCamp});
+			Campground.find().limit(5).exec((err, limitCamps) => {
+				if(err) {
+					res.redirect("/campgrounds");
+				} else {
+					//Render the page with id data
+					res.render("campgrounds/show", {camp: foundCamp,sideCamps: limitCamps});
+				}
+			});
 		}
 	});
 });
